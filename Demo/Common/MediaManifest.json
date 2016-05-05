@@ -1,0 +1,12 @@
+[
+    {
+        "title" : "Audio Stream",
+        "mediaURL" : "http://m1.music.126.net/aweVZVkfQM-QvxP72KhGEA==/1143492092887042.mp3",
+        "thumbnailResourceName" : "AudioThumb.png"
+    },
+    {
+         "title" : "Video Stream",
+         "mediaURL" : "http://wvideo.spriteapp.cn/video/2016/0328/56f8ec01d9bfe_wpd.mp4",
+         "thumbnailResourceName" : "VideoThumb.png"
+    },
+]

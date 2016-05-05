@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "06A1804BE31D5AFD55791C12300724265363A8DE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "06A1804BE31D5AFD55791C12300724265363A8DE" : 0,
+    "3129A4513291312DE59545E1E7E7C4F338086BD0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "ECACF624-BED0-4192-96AB-BD8B9D2EBED0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "06A1804BE31D5AFD55791C12300724265363A8DE" : "AVPlayerCacheSupport\/",
+    "3129A4513291312DE59545E1E7E7C4F338086BD0" : "AVPlayerCacheSupport\/AVPlayerCacheSupport\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AVFoundationQueuePlayer-iOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Demo\/Objective-C\/AVFoundationQueuePlayer-iOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/msching\/AVPlayerCacheSupport.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "06A1804BE31D5AFD55791C12300724265363A8DE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.hz.netease.com\/git\/chengyin\/AVPlayerCacheSupport.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3129A4513291312DE59545E1E7E7C4F338086BD0"
+    }
+  ]
+}
