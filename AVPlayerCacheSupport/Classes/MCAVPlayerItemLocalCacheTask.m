@@ -20,8 +20,19 @@
             [self handleFinished];
             return;
         }
-        NSData *data = [_cacheFile dataWithRange:_range];
-        [_loadingRequest.dataRequest respondWithData:data];
+        
+        NSUInteger offset = _range.location;
+        NSUInteger lengthPerRead = 10000;
+        while (offset < NSMaxRange(_range))
+        {
+            @autoreleasepool
+            {
+                NSRange range = NSMakeRange(offset, MIN(NSMaxRange(_range) - offset,lengthPerRead));
+                NSData *data = [_cacheFile dataWithRange:_range];
+                [_loadingRequest.dataRequest respondWithData:data];
+                offset = NSMaxRange(range);
+            }
+        }
         [self handleFinished];
     }
 }

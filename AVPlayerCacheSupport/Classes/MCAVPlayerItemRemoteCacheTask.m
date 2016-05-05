@@ -64,14 +64,8 @@
 {
     [super cancel];
     [_connection cancel];
-    if (_dataSaved)
-    {
-        [_cacheFile synchronize];
-    }
-    if (_runloop)
-    {
-        CFRunLoopStop(_runloop);
-    }
+    [self synchronizeCacheFileIfNeeded];
+    [self stopRunLoop];
 }
 
 - (void)startURLRequestWithRequest:(AVAssetResourceLoadingRequest *)loadingRequest range:(NSRange)range
@@ -94,8 +88,29 @@
     _connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self startImmediately:NO];
     [_connection setDelegateQueue:[[self class] downloadOperationQueue]];
     [_connection start];
+    [self startRunLoop];
+}
+
+- (void)synchronizeCacheFileIfNeeded
+{
+    if (_dataSaved)
+    {
+        [_cacheFile synchronize];
+    }
+}
+
+- (void)startRunLoop
+{
     _runloop = CFRunLoopGetCurrent();
     CFRunLoopRun();
+}
+
+- (void)stopRunLoop
+{
+    if (_runloop)
+    {
+        CFRunLoopStop(_runloop);
+    }
 }
 
 #pragma mark - handle connection
@@ -142,26 +157,14 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    if (_dataSaved)
-    {
-        [_cacheFile synchronize];
-    }
-    if (_runloop)
-    {
-        CFRunLoopStop(_runloop);
-    }
+    [self synchronizeCacheFileIfNeeded];
+    [self stopRunLoop];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    if (_dataSaved)
-    {
-        [_cacheFile synchronize];
-    }
+    [self synchronizeCacheFileIfNeeded];
     _error = error;
-    if (_runloop)
-    {
-        CFRunLoopStop(_runloop);
-    }
+    [self stopRunLoop];
 }
 @end
