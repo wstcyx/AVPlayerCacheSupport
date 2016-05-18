@@ -95,7 +95,7 @@ static const void * const kAVPlayerItemMCCacheSupportCacheLoaderKey = &kAVPlayer
     AVURLAsset *asset = [AVURLAsset URLAssetWithURL:[URL mc_avplayerCacheSupportURL] options:options];
     [asset.resourceLoader setDelegate:cacheLoader queue:dispatch_get_main_queue()];
     AVPlayerItem *item = [self playerItemWithAsset:asset];
-    objc_setAssociatedObject(self, kAVPlayerItemMCCacheSupportCacheLoaderKey, cacheLoader, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(item, kAVPlayerItemMCCacheSupportCacheLoaderKey, cacheLoader, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     return item;
 }
 

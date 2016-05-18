@@ -15,7 +15,7 @@ typedef void (^MCAVPlayerItemCacheTaskFinishedBlock)(NSError *error);
 @interface MCAVPlayerItemCacheTask : NSOperation
 {
 @protected
-    __weak AVAssetResourceLoadingRequest *_loadingRequest;
+    AVAssetResourceLoadingRequest *_loadingRequest;
     NSRange _range;
     MCAVPlayerItemCacheFile *_cacheFile;
 }
