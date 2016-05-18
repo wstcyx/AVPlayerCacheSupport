@@ -157,10 +157,10 @@
 			children = (
 				DE4C62E11CD8558E004B60FC /* MCCacheSupportUtils.h */,
 				DE4C62E21CD8558E004B60FC /* MCCacheSupportUtils.m */,
-				DEE18EEF1CD9D75300662D5E /* MCAVPlayerItemCacheFile.h */,
-				DEE18EF01CD9D75300662D5E /* MCAVPlayerItemCacheFile.m */,
 				DEE18EF11CD9D75300662D5E /* MCAVPlayerItemCacheLoader.h */,
 				DEE18EF21CD9D75300662D5E /* MCAVPlayerItemCacheLoader.m */,
+				DEE18EEF1CD9D75300662D5E /* MCAVPlayerItemCacheFile.h */,
+				DEE18EF01CD9D75300662D5E /* MCAVPlayerItemCacheFile.m */,
 				DEE18EF31CD9D75300662D5E /* MCAVPlayerItemCacheTask.h */,
 				DEE18EF41CD9D75300662D5E /* MCAVPlayerItemCacheTask.m */,
 				DEE18EF51CD9D75300662D5E /* MCAVPlayerItemLocalCacheTask.h */,

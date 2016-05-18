@@ -24,6 +24,8 @@
 + (instancetype)cacheFileWithFilePath:(NSString *)filePath;
 - (instancetype)initWithFilePath:(NSString *)filePath;
 
++ (NSString *)indexFileExtension;
+
 - (NSRange)cachedRangeForRange:(NSRange)range;
 - (NSRange)cachedRangeContainsPosition:(NSUInteger)pos;
 - (NSRange)firstNotCachedRangeFromPosition:(NSUInteger)pos;

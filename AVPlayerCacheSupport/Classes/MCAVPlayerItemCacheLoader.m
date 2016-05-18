@@ -56,6 +56,12 @@
     return _cacheFile.cacheFilePath;
 }
 
++ (void)removeCacheWithCacheFilePath:(NSString *)cacheFilePath
+{
+    [[NSFileManager defaultManager] removeItemAtPath:cacheFilePath error:NULL];
+    [[NSFileManager defaultManager] removeItemAtPath:[cacheFilePath stringByAppendingString:[MCAVPlayerItemCacheFile indexFileExtension]] error:NULL];
+}
+
 - (void)dealloc
 {
     [_operationQueue cancelAllOperations];

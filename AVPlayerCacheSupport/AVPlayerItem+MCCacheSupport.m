@@ -99,6 +99,11 @@ static const void * const kAVPlayerItemMCCacheSupportCacheLoaderKey = &kAVPlayer
     return item;
 }
 
++ (void)mc_removeCacheWithCacheFilePath:(NSString *)cacheFilePath
+{
+    [MCAVPlayerItemCacheLoader removeCacheWithCacheFilePath:cacheFilePath];
+}
+
 #pragma mark - property
 - (MCAVPlayerItemCacheLoader *)mc_cacheLoader
 {

@@ -15,4 +15,5 @@
 
 + (instancetype)cacheLoaderWithCacheFilePath:(NSString *)cacheFilePath;
 - (instancetype)initWithCacheFilePath:(NSString *)cacheFilePath;
++ (void)removeCacheWithCacheFilePath:(NSString *)cacheFilePath;
 @end

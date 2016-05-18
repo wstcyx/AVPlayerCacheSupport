@@ -42,7 +42,7 @@ const NSString *MCAVPlayerCacheFileResponseHeadersKey = @"responseHeaders";
     if (self)
     {
         NSString *cacheFilePath = [filePath copy];
-        NSString *indexFilePath = [NSString stringWithFormat:@"%@.idx",filePath];
+        NSString *indexFilePath = [NSString stringWithFormat:@"%@%@",filePath,[[self class] indexFileExtension]];
         
         BOOL cacheFileExist = [[NSFileManager defaultManager] fileExistsAtPath:cacheFilePath];
         BOOL indexFileExist = [[NSFileManager defaultManager] fileExistsAtPath:indexFilePath];
@@ -80,6 +80,11 @@ const NSString *MCAVPlayerCacheFileResponseHeadersKey = @"responseHeaders";
         [self checkCompelete];
     }
     return self;
+}
+
++ (NSString *)indexFileExtension
+{
+    return @".idx!";
 }
 
 - (void)dealloc

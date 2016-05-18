@@ -37,7 +37,7 @@ typedef NS_ENUM(NSUInteger, AVPlayerMCCacheError)
  *
  *  @return AVPlayerItem with cache support
  */
-+ (instancetype)mc_playerItemWithRemoteURL:(NSURL *)URL error:(NSError **)error;
++ (instancetype)mc_playerItemWithRemoteURL:(NSURL *)URL error:(NSError **)error NS_AVAILABLE(10_9, 7_0);
 
 /**
  *  AVPlayerItem with cache support, same to -mc_playerItemWithRemoteURL:URL options:options cacheFilePath:nil error:error
@@ -61,4 +61,11 @@ typedef NS_ENUM(NSUInteger, AVPlayerMCCacheError)
  *  @return AVPlayerItem with cache support
  */
 + (instancetype)mc_playerItemWithRemoteURL:(NSURL *)URL options:(NSDictionary<NSString *, id> *)options cacheFilePath:(NSString *)cacheFilePath error:(NSError **)error NS_AVAILABLE(10_9, 7_0);
+
+/**
+ *  remove cache file and cache index file
+ *
+ *  @param cacheFilePath cache file path.
+ */
++ (void)mc_removeCacheWithCacheFilePath:(NSString *)cacheFilePath NS_AVAILABLE(10_9, 7_0);
 @end
