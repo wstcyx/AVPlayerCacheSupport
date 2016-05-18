@@ -151,7 +151,10 @@
     {
         _dataSaved = YES;
         _offset += [data length];
-        [_loadingRequest.dataRequest respondWithData:data];
+        if (![self isCancelled])
+        {
+            [_loadingRequest.dataRequest respondWithData:data];
+        }
     }
 }
 

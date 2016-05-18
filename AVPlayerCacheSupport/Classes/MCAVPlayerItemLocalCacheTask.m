@@ -25,10 +25,14 @@
         NSUInteger lengthPerRead = 10000;
         while (offset < NSMaxRange(_range))
         {
+            if ([self isCancelled])
+            {
+                break;
+            }
             @autoreleasepool
             {
                 NSRange range = NSMakeRange(offset, MIN(NSMaxRange(_range) - offset,lengthPerRead));
-                NSData *data = [_cacheFile dataWithRange:_range];
+                NSData *data = [_cacheFile dataWithRange:range];
                 [_loadingRequest.dataRequest respondWithData:data];
                 offset = NSMaxRange(range);
             }
